@@ -96,7 +96,7 @@ int main(int argc, char ** argv)
   auto node = std::make_shared<rclcpp::Node>("netft_node");
   const rclcpp::QoS qos(10);
   rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr ready_pub = node->create_publisher<std_msgs::msg::Bool>("netft_ready", qos);
-  rclcpp::Publisher<geometry_msgs::msg::WrenchStamped>::SharedPtr geo_pub = node->create_publisher<geometry_msgs::msg::WrenchStamped>("netft_data", 100);
+  rclcpp::Publisher<geometry_msgs::msg::WrenchStamped>::SharedPtr geo_pub = node->create_publisher<geometry_msgs::msg::WrenchStamped>("/netft/raw_sensor", 100);
 
   try {
     netft = std::make_shared<netft_rdt_driver::NetFTRDTDriver>(address, frame_id);
