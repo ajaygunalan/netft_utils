@@ -14,3 +14,10 @@ To run an example launch for `ros2_control` run the following with option namesp
 ```sh
 ros2 launch netft_utils netft.launch.py node_namespace:="test_ns/"
 ```
+
+
+Other similar repos:
+
+```
+[ros2_net_ft_driver](https://github.com/gbartyzel/ros2_net_ft_driver)
+```
